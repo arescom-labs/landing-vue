@@ -131,7 +131,7 @@ const goRegist = () => {
   top: 0;
   width: 100%;
   height: calc(680 * var(--u));
-  background: url('@/assets/images/invitation-bg.jpg') center / cover no-repeat;
+  background: url('@/assets/images/landing/2026/ow/invitation-bg.jpg') center / cover no-repeat;
 }
 
 .hero-gradient {

@@ -17,9 +17,10 @@ const handlePageShow = () => {
 
   if (!authStore.accessToken) {
     authStore.clearAuth()
-    router.replace('/admin')
+    router.replace({ name: 'AdminAuth' })
   }
 }
+
 onMounted(() => {
   window.addEventListener('pageshow', handlePageShow)
 })
@@ -31,5 +32,5 @@ onUnmounted(() => {
 
 <template>
   <Toaster position="top-center" rich-colors />
-  <router-view />
+  <RouterView />
 </template>

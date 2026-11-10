@@ -106,7 +106,8 @@ const goHome = () => {
   width: calc(640 * var(--u));
   height: calc(1136 * var(--u));
   overflow: hidden;
-  background: #202a36 url('@/assets/images/invitation-bg.jpg') center / cover no-repeat;
+  background: #202a36 url('@/assets/images/landing/2026/ow/invitation-bg.jpg') center / cover
+    no-repeat;
 }
 
 /* 배경 오버레이 */
