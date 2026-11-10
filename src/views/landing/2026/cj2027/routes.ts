@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 // Portal
 // import LandingMain from './portal/LandingMain.vue'
 import RegistAgree from './portal/RegistAgree.vue'
-// import CmpltView from './portal/CmpltView.vue'
+import CmpltView from './portal/CmpltView.vue'
 
 // Admin
 // import AdminAuth from './admin/AdminAuth.vue'
@@ -20,11 +20,11 @@ const routes: RouteRecordRaw[] = [
     name: 'RegistAgree',
     component: RegistAgree,
   },
-  // {
-  //   path: '/complete',
-  //   name: 'CmpltView',
-  //   component: CmpltView,
-  // },
+  {
+    path: '/complete',
+    name: 'CmpltView',
+    component: CmpltView,
+  },
   // {
   //   path: '/admin',
   //   name: 'AdminAuth',
