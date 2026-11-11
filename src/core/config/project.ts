@@ -9,7 +9,9 @@ export const PROJECT_CONFIG = {
   category: 'landing',
   year: '2026',
   projectName: 'cj2027',
-  title: '2026 한반도해상풍력 연말 초청 만찬',
+  // title: '2026 한반도해상풍력 연말 초청 만찬',
+  title: 'CJ ENM 광고주설명회 MEET & GROW 2027',
+  
 } as const
 
 /**

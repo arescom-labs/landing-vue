@@ -640,6 +640,18 @@ const refresh = (): void => {
 // -----------------------------------------------------------------------------
 // Excel Download
 // -----------------------------------------------------------------------------
+interface ExcelColumn {
+  columnName: string
+  headerName: string
+}
+
+const excelColumns: ExcelColumn[] = [
+  { columnName: 'REG_DT', headerName: '신청일시' },
+  { columnName: 'ADHRNC_NM', headerName: '성명' },
+  { columnName: 'MOBLPHON', headerName: '연락처' },
+  { columnName: 'CUST_NM_01', headerName: '소속' },
+  { columnName: 'CUST_NM_02', headerName: '선박명' },
+]
 
 const handleExcelDownload = async (): Promise<void> => {
   if (isExcelDownloading.value) return
@@ -650,8 +662,11 @@ const handleExcelDownload = async (): Promise<void> => {
     const response = await adminApi.post(
       API.excel,
       {
-        keyword: searchForm.value.keyword.trim(),
-        sortType: searchForm.value.sortType,
+        searchVO: {
+          keyword: searchForm.value.keyword.trim(),
+          sortType: searchForm.value.sortType,
+        },
+        columns: excelColumns,
       },
       {
         responseType: 'blob',

@@ -31,6 +31,7 @@ const goHome = () => {
 </template>
 
 <style>
+
 @font-face {
   font-family: 'Pretendard';
   font-weight: 400;
@@ -72,10 +73,18 @@ const goHome = () => {
   min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
+
   display: flex;
   justify-content: center;
-  background: linear-gradient(#161823 0%, #0d0e15 50%, #040205 100%);
+
+  background: linear-gradient(
+    #161823 0%,
+    #0d0e15 50%,
+    #040205 100%
+  );
+
   color: #fff;
+
   font-family:
     'Pretendard',
     -apple-system,
@@ -83,6 +92,7 @@ const goHome = () => {
     'Apple SD Gothic Neo',
     'Malgun Gothic',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
 }
@@ -97,28 +107,41 @@ const goHome = () => {
   width: calc(640 * var(--u));
   min-height: 100vh;
   min-height: 100dvh;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
   flex-shrink: 0;
 }
 
 .complete-screen {
   position: relative;
+
   width: calc(640 * var(--u));
   height: calc(1000 * var(--u));
+
   flex-shrink: 0;
   overflow: hidden;
 
-  background: #040204 url('@/assets/images/landing/2026/cj2027/image-5.jpg') center top / 100% 100%
+  background:
+    #040204
+    url('@/assets/images/landing/2026/cj2027/image-5.jpg')
+    center top / 100% 100%
     no-repeat;
 }
 
 /* 완료 메시지 영역 */
 .complete-content {
   position: absolute;
-  top: calc(550 * var(--u));
+
+  top: 55%;
   left: 0;
+
   width: 100%;
+
+  transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,11 +152,17 @@ const goHome = () => {
 .complete-icon {
   width: calc(64 * var(--u));
   height: calc(64 * var(--u));
+
   margin-bottom: calc(32 * var(--u));
+
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 0 calc(12 * var(--u)) rgba(255, 255, 255, 0.25));
+
+  filter: drop-shadow(
+    0 0 calc(12 * var(--u))
+    rgba(255, 255, 255, 0.25)
+  );
 }
 
 .complete-icon svg {
@@ -145,18 +174,25 @@ const goHome = () => {
 /* 완료 제목 */
 .complete-title {
   margin: 0;
+
   color: #fff;
+
   font-size: calc(45 * var(--u));
   font-weight: 900;
   line-height: 1.4;
   letter-spacing: -0.025em;
-  text-shadow: 0 0 calc(20 * var(--u)) rgba(255, 255, 255, 0.18);
+
+  text-shadow:
+    0 0 calc(20 * var(--u))
+    rgba(255, 255, 255, 0.18);
 }
 
 /* 감사 문구 */
 .complete-message {
   margin: calc(18 * var(--u)) 0 0;
+
   color: rgba(255, 255, 255, 0.85);
+
   font-size: calc(25 * var(--u));
   font-weight: 500;
   line-height: 1.5;
@@ -167,6 +203,7 @@ const goHome = () => {
 .home-button {
   width: calc(220 * var(--u));
   height: calc(54 * var(--u));
+
   margin-top: calc(65 * var(--u));
   padding: 0 calc(28 * var(--u));
 
@@ -177,6 +214,7 @@ const goHome = () => {
 
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: calc(28 * var(--u));
+
   background: #fff;
   color: #171720;
 
@@ -186,6 +224,7 @@ const goHome = () => {
   letter-spacing: 0.015em;
 
   cursor: pointer;
+
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -194,7 +233,11 @@ const goHome = () => {
 
 .home-button:hover {
   background: #eee9fa;
-  box-shadow: 0 0 calc(24 * var(--u)) rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 0 calc(24 * var(--u))
+    rgba(255, 255, 255, 0.3);
+
   transform: translateY(calc(-3 * var(--u)));
 }
 
@@ -206,6 +249,7 @@ const goHome = () => {
   font-family: Arial, sans-serif;
   font-size: calc(23 * var(--u));
   font-weight: 400;
+
   transition: transform 0.2s ease;
 }
 
@@ -220,10 +264,6 @@ const goHome = () => {
 
 /* 작은 모바일 화면 */
 @media (max-width: 420px) {
-  .complete-content {
-    top: calc(350 * var(--u));
-  }
-
   .complete-title {
     font-size: calc(28 * var(--u));
   }
@@ -232,4 +272,5 @@ const goHome = () => {
     font-size: calc(19 * var(--u));
   }
 }
+
 </style>
