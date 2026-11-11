@@ -135,7 +135,7 @@ const goHome = () => {
 .complete-content {
   position: absolute;
 
-  top: 55%;
+  top: 62%;
   left: 0;
 
   width: 100%;
